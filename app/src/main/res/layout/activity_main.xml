@@ -3,10 +3,41 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="estoy probando mi aplicacion" android:layout_width="wrap_content"
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lbHello" />
+        android:text="@string/obrasBt"
+        android:id="@+id/obrasBt"
+        android:layout_marginTop="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/correosBt"
+        android:id="@+id/correosBt"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/obrasBt"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/estadisticasBt"
+        android:id="@+id/estadisticasBt"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/correosBt"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aboutBt"
+        android:id="@+id/aboutBt"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/estadisticasBt"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

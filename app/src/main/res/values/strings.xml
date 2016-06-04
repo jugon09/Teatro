@@ -4,5 +4,8 @@
     <string name="app_name">Teatro</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+    <string name="obrasBt">Obras</string>
+    <string name="correosBt">Correos Usuarios</string>
+    <string name="estadisticasBt">Estadisticas</string>
+    <string name="aboutBt">About</string>
 </resources>

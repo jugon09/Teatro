@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="obra_array">
+        <item>Obra 1</item>
+        <item>Obra 2</item>
+        <item>Obra 3</item>
+        <item>Obra 4</item>
+    </string-array>
+</resources>
