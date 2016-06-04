@@ -3,9 +3,11 @@ package com.example.camiloandrescastro.teatro;
 public class Butaca {
     private int id;
     private boolean ocupado;
-    public Butaca(int id, boolean ocupado) {
+    private Usuario usuario;
+    public Butaca(int id, boolean ocupado, Usuario usu) {
         this.id = id;
         this.ocupado = ocupado;
+        usuario = usu;
     }
 
     public int getId() {
@@ -22,5 +24,13 @@ public class Butaca {
 
     public void setOcupado(boolean ocupado) {
         this.ocupado = ocupado;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

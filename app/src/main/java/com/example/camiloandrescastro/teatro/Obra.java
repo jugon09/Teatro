@@ -1,18 +1,27 @@
 package com.example.camiloandrescastro.teatro;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Obra {
     private String title;
     private String descripcion;
     private int duracion;
     private int precio;
-    private DiaHoras diaHoras;
+    private Date inicio;
+    private Date fin;
+    private GestorButacas gb;
 
-    public Obra(String title, String descripcion, int duracion, int precio, DiaHoras diaHoras) {
+    public Obra(String title, String descripcion, int duracion, int precio, Date inicio, Date fin) {
         this.title = title;
         this.descripcion = descripcion;
         this.duracion = duracion;
         this.precio = precio;
-        this.diaHoras = diaHoras;
+        this.inicio = inicio;
+        this.fin = fin;
+        ArrayList<Boolean> buts = new ArrayList<>(GestorButacas.NUM_BUTACAS);
+        for (int i = 0; i < buts.size(); ++i) buts.set(i,false);
+        this.gb = new GestorButacas(buts);
     }
 
     public String getTitle() {
@@ -47,11 +56,32 @@ public class Obra {
         this.precio = precio;
     }
 
-    public DiaHoras getDiaHoras() {
-        return diaHoras;
+
+    public Date getInicio() {
+        return inicio;
     }
 
-    public void setDiaHoras(DiaHoras diaHoras) {
-        this.diaHoras = diaHoras;
+    public void setInicio(Date inicio) {
+        this.inicio = inicio;
     }
+
+    public Date getFin() {
+        return fin;
+    }
+
+    public void setFin(Date fin) {
+        this.fin = fin;
+    }
+
+    public GestorButacas getGb() {
+        return gb;
+    }
+
+    public void setGb(GestorButacas gb) {
+        this.gb = gb;
+    }
+
+    public Butaca getButaca(int id) {return gb.getButaca(id);}
+
+    public static int num_butacas() {return GestorButacas.NUM_BUTACAS;}
 }
